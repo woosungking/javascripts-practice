@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+            @keyframes move-the-circle{
+            0%{
+                transform: translate(0 ,0);
+            }
+            50%{
+                transform: translate(1000px ,0);
+            }
+            100%{
+                transform: translate(0 ,0);
+            }
+        }
+        @keyframes move-up-down {
+        0% {
+            transform: translateY(0); /* 시작 지점 */
+        }
+        50% {
+            transform: translateY(-1000px); /* 중간 지점 */
+        }
+        100% {
+            transform: translateY(0); /* 끝 지점 */
+        }
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg); /* 회전 각도: 0도 */
+        }
+        100% {
+            transform: rotate(360deg); /* 회전 각도: 360도 (한 바퀴 회전) */
+        }
+    }
+
+    @keyframes spin2 {
+        0% {
+            transform: rotate(0deg); /* 회전 각도: 0도 */
+            transform-origin: center; /* 회전 중심: 요소의 중앙 */
+        }
+        100% {
+            transform: rotate(360deg); /* 회전 각도: 360도 (한 바퀴 회전) */
+            transform-origin: center; /* 회전 중심: 요소의 중앙 */
+        }
+    }
+
+        *{
+            text-align: center;
+            list-style: none;
+        }
+
+        body{
+            background-image: url(./jaejoon/디그다.JPG);
+            
+        }
+
+        nav{
+            background: linear-gradient(rgb(159, 255, 139),rgb(241, 140, 220),rgb(131, 187, 243));
+            height: 100px;
+        }
+        
+
+                
+                .madimi-one-regular {
+                  font-family: "Madimi One", sans-serif;
+                  font-weight: 400;
+                  font-style: normal;
+                }
+
+        #main-title{
+            font-size: 70px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: white;
+        }
+        aside{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .sidebar {
+        position: fixed;
+         /* margin-left: auto;
+
+         background-image: url(./study/shark.png);
+         background-size: auto;
+         background-position: center;
+         background-repeat: no-repeat; */
+         background-image: url(./jaejoon/구걸.JPG);
+         width: 300px;
+         height: 500px;
+         border-radius: 10px;
+         z-index: 2;
+         
+        }
+        
+        .success{
+            background-image: url(./jaejoon/엘모.JPG);
+            border: solid black;
+            background-size: cover;
+            background-position: center;
+            font-size: 30px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+            
+        }
+        .xijoon-img{
+            height: 300px;
+            width: 300px;
+            
+        }
+        .xijoon-img-tag{
+            display: inline;
+        }
+
+
+        .list{
+            font-size: 30px;
+        }
+        .family:hover{
+            background-image: url(./jaejoon/재준와이프.JPG);
+            height: 500px;
+            width: 500px;
+            background-position: center;
+            background-size: cover;
+            z-index: 2;
+        }
+        .family{
+            margin-right: 20px;
+            margin-top: 30px;
+            background: linear-gradient(rgb(136, 75, 120),rgb(200, 38, 178),rgb(226, 19, 99));
+            border-radius: 40%;
+
+        }
+        .donate{
+            background: linear-gradient(rgb(136, 75, 120),rgb(200, 38, 178),rgb(226, 19, 99));
+            border-radius: 40%;
+        }
+
+        .donate:hover{
+            background-image: url(./jaejoon/다운로드.jpeg);
+            height: 500px;
+            width: 500px;
+            background-position: center;
+            background-size: cover;
+        }
+        ul.list > li{
+            display: inline-block;
+        }
+        ul.potupolio>li{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: aliceblue;
+        }
+        main{
+            background-image: url(./jaejoon/전쟁시대.JPG);
+            border: solid black;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        #po{
+            font-size: 30px;
+        }
+        footer{
+            background-image: url(./jaejoon/재준이집.jpeg);
+            
+            background-position: center;
+            background-size: cover;
+            height: 1000px;
+            
+        }
+        #img1{
+             background-image: url(./jaejoon/goA.png); 
+            
+            animation-name: move-the-circle;
+            animation-duration: 3s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            top: 90%;
+            animation-iteration-count: infinite;
+        }
+        #img2{
+            background-image: url(./jaejoon/버거.png);
+            animation-name: move-the-circle;
+            animation-duration: 1s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            top: 90%;
+            animation-iteration-count: infinite;
+        }
+
+        #img3{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: move-up-down;
+            animation-duration: 3s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            right: 10%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        #img4{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: spin2;
+            animation-duration: 1s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            right: 40%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+    
+        #img5{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: move-up-down;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            right: 50%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+    
+        #img6{ 
+            background-image: url(./jaejoon/문붕이.png);
+            animation-name: move-the-circle;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            left: 10%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        #img7{
+            background-image: url(./jaejoon/코붕이.png);
+            animation-name: move-the-circle;
+            animation-duration: 2s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            left: 10%;
+            animation-iteration-count: infinite;
+            position: absolute;
+
+        }
+        #img8{
+            background-image: url(./jaejoon/신입생.png);
+            animation-name: spin;
+            animation-duration: 6s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 80%;
+            top: -3%;
+            animation-iteration-count: infinite;
+            position: absolute;   
+        }
+        
+        #img9{
+            background-image: url(./jaejoon/반다크.PNG);
+            animation-name: move-the-circle;
+            animation-duration: 10s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 10%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+
+        #img10{
+            background-image: url(./jaejoon/‘빌리’의\ 배경이\ 제거됨.png);
+            animation-name: spin;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            left: 70%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+
+        #img11{
+            background-image: url(./jaejoon/‘석천이햄’의\ 배경이\ 제거됨.png);
+            animation-name: spin, move-the-circle;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            left: 20%;
+            animation-iteration-count: infinite;
+            position: absolute;
+            
+        }
+        #img12{
+            background-image: url(./jaejoon/‘츄릅’의\ 배경이\ 제거됨.png);
+            animation-name: spin, move-the-circle;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 400px;
+            height: 100px;
+            left: 20%;
+            bottom: 50%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        #img13{
+            background-image: url(./jaejoon/‘헬스’의\ 배경이\ 제거됨.png);
+            animation-name: spin, move-the-circle;
+            animation-duration: 7s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 300px;
+            height: 300px;
+            left: 20%;
+            bottom: 50%;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        #bounce1{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: spin;
+            animation-duration: 6s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 10%;
+            top: -3%;
+            animation-iteration-count: infinite;
+            position: absolute; 
+        }
+        #bounce2{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: spin;
+            animation-duration: 6s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 7%;
+            top: -3%;
+            animation-iteration-count: infinite;
+            position: absolute; 
+        }
+        #bounce3{
+            background-image: url(./jaejoon/‘머그샷’의\ 배경이\ 제거됨.png);
+            animation-name: spin;
+            animation-duration: 6s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 5%;
+            top: -3%;
+            animation-iteration-count: infinite;
+            position: absolute; 
+        }
+        #bounce4{
+            background-image: url(./jaejoon/‘빌리’의\ 배경이\ 제거됨.png);
+            animation-name: spin2;
+            animation-duration: 6s;
+            
+            background-size: cover;
+            background-position:center ;
+            width: 200px;
+            height: 200px;
+            left: 5%;
+            top: -3%;
+            animation-iteration-count: infinite;
+            position: absolute; 
+        }
+        #intro{
+            font-size: 30px;
+            color: aliceblue;
+        }
+        #down300{
+            height: 300px;
+        }
+        #down500{
+            height: 500px;
+        }
+        .font-size-title{
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        .video{
+            background-image: url(./jaejoon/마포대교.jpeg);
+            border: solid black;
+            background-size: cover;
+            background-position: center;
+            height: 800px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <head>
+        <p id="main-title" class="madimi-one-regular">일간 재준 저장소</p>
+    </head>
+    <nav>
+        <ul class="list">
+            <li class="family">본처</li>
+            <li class="donate">입양인</li>
+            <li></li>
+        </ul>
+    </nav>
+
+
+    <aside>
+        <section class="sidebar">
+            작품명: 재준이의 소원 
+            <br> 
+            <br>
+            <br>작가의 의도: 
+            <br>선빵 필승
+            <br>
+        
+        </section>
+    </aside>
+
+    <section class="font-size-title">
+        <p>반포대교 북단에서 주어온 재준이를 도와주세요.</p>
+
+    </section>
+
+
+    <main>
+        <p id="intro">나 문제준은 이런 사람입니다.</p>
+        <ul class="potupolio">
+            <li>1. 슬리피우드 여심 폭격기</li>
+            <li>2. 일간베스트 "2"기 정회원 </li>
+            <li>3. 패션진보</li>
+            <li>4. 고아원 훈육 담당관</li>
+            <li>5. 반포대교 유기 캠패인 원조</li>
+        </ul>
+
+    </main>
+
+        <section class="success">
+            <p>25살에 성공적으로 입양 될 수 있던 이유</p>
+            <p>1. 꾸준한 자기 관리</p>
+                <video src="./jaejoon/오운완.MOV" width="500px" height="500px" controls type="video/mp4"></video>
+            <p>2. 끊기지 않는 연애</p>
+            <video src="./jaejoon/연애.MOV" width="500px" height="500px" controls type="video/mp4"></video>
+
+            <p>3. 아침일찍 일어나기</p>
+            <video class="xijoon-img" src="./jaejoon/IMG_1536.MOV" controls type="video/mp4" width="500px" height="500px" autoplay></video>
+            <p>4. 지속적인 충격요법</p>
+            <video src="./jaejoon/빠따.MOV" width="500px" height="500px" controls type="video/mp4"></video>
+
+        </section>
+
+    
+    <footer>
+        <div id="img1"></div>
+        <div id="img2"></div>
+        <div id="img3"></div>
+        <div id="img4"></div>
+        <div id="img5"></div>
+        <div id="img6"></div>
+        <div id="img7"></div>
+        <div id="img8"></div>
+        <div id="img9"></div>
+        <div id="img10"></div>
+        <div id="img11"></div>
+        <div id="img12"></div>
+        <div id="img13"></div>
+
+        <div id="bounce1"></div>
+        <div id="bounce2"></div>
+        <div id="bounce3"></div>
+        <div id="bounce4"></div>
+        
+        
+    </footer>
+    
+    
+</body>
+</html>
