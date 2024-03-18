@@ -5,8 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // import Library from './chapter_03/Library';
-import Clock from './chapter_04/clock'
-import CommentList from './chapter_05/CommentList';
+// import Clock from './chapter_04/clock'
+// import CommentList from './chapter_05/CommentList';
+ import NotificationList from './chapter_07/NotificationList';
+
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <Library/>
@@ -31,12 +34,19 @@ import CommentList from './chapter_05/CommentList';
 //   document.getElementById('root') ); 
 // }, 1000 );
 
-ReactDOM.render(
-    <React.StrictMode>
-      <CommentList/>
-    </React.StrictMode>,
-    document.getElementById('root')
+// ReactDOM.render(
+//     <React.StrictMode>
+//       <CommentList/>
+//     </React.StrictMode>,
+//     document.getElementById('root')
     
+// );
+
+ReactDOM.render(
+  <React.StrictMode>
+    <NotificationList/>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
