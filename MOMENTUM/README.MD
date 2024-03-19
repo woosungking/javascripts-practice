@@ -57,7 +57,7 @@
                          this.classList.add("active");
                      }
 
-                     
+
             Togle
                 JavaScript의 toggle() 메서드는 요소의 클래스를 토글하는 데 사용됩니다. 즉, 요소에 클래스가 이미 존재하는 경우에는 제거하고, 존재하지 않는 경우에는 추가합니다.
 
@@ -73,4 +73,81 @@
 
             2. tag.addEventListener("click", handleMouseEnter(tag));
                 -> 인자를 따로 안넘겨줘도 자바스크립트 자체로 this로 해석한다고 함.
-        
+
+<h2>~#4 까지</h2>
+
+    #4
+
+        Local Storage
+            Session,Cookies 는 너무 익숙하지만 Local Storage는 처음 들어봤다.
+            Session, Cookies 처럼 저장소의 역할을 하고, 클라이언트 컴퓨터 브라우저에 저장이 된다.
+            쿠키랑 유사하다고 생각했는데
+
+            Cookies와 Local Storage 공통점
+                클라이언트의 컴퓨터에 저장된다.
+            
+            Cookies와 Local Storage 차이점
+                1. 서버에 영향을 주지 않으며 웹브라우저에서 사용되는 데이터 이다.
+                2. 쿠키는 만료기간을 따로 안정해주면 세션과 동일한 생명주기를 가지지만 Storage는 반영구적이다.
+                3. 보안측면에서 더 좋다고 한다.
+
+        메모
+
+            div가 아닌 form으로 감싸면 app.js에서 선언한 console.log가 나오다가 바로 사라져 버리는데, 이유는 form 속성이 행위가 완료되면 새로고침을 해서 그렇다고 한다.
+
+            const value = loginInput.value;
+            if(value.length>5){}
+            이런식으로 하는거 보다 input 태그에 required maxlength 로 해주는게 더 좋다고 함. 
+
+
+            함수의 첫번째 변수로 들어가는 event는(다른 이름도 가능) 해당 행위가 일어났을때 발생하는 event객체를 무조건 받는다. preventDefault를 해준 이유는 "form" 태그는 이벤트가 발생하면 브라우저가 새로고침이 되도록 하는 속성이 있는데 이 부분을 무시하고 싶어서 preventDefault() 를 사용했다.
+            즉 preventDefault는 event를 무시할때 사용한다.
+
+                예시
+                    function loginBtn(event){
+                        event.preventDefault();
+                        "그 외 코드"
+                    }
+
+        오류
+                <div  id="login-form">
+                    <input type="text" placeholder="what/' your name ">
+                    <button>Log In</button>
+                </div>
+
+                div가 아닌 form으로 감싸면 app.js에서 선언한 console.log가 나오다가 바로 사라져 버리는데, 이유는 form 속성이 행위가 완료되면 새로고침을 해서 그렇다고 한다.
+
+
+
+
+                function onLoginBtnClick(loginInput){
+                    const value = loginInput.value;
+                    if(value===""){
+                        alert("Write Your Name");
+                    }else{
+                        alert("OK");
+                    }
+                }
+                
+                loginButton.addEventListener("click", onLoginBtnClick(loginInput));
+
+                위 로직에서 버튼이 눌리면 input값을 함수의 인자로 넘겨 값이 있는지 없는지 확인 하려고 한다.
+
+                    문제점
+                        
+                        저런식으로 넘기면 인식을 못하므로
+                    
+                    해결
+
+                        loginButton.addEventListener("click", function() {
+                            onLoginBtnClick(loginInput);
+                        });
+
+                        혹은
+
+                        loginButton.addEventListener("click", () => {
+                            onLoginBtnClick(loginInput);
+                        });
+
+                
+
