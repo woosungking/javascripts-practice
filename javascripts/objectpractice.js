@@ -6,6 +6,14 @@ let obj5={
     a:{a:"apple", b:"banana",c:"ccc"}
 }
 
-console.log(obj1.a)
-console.log(obj5.a.a)
+// console.log(obj1.a)
+// console.log(obj5.a.a)
 
+
+const player={
+    name: "kim",
+    age: 10,
+
+};
+console.log(player["name"]);
+console.log(player.name);
