@@ -150,4 +150,18 @@
                         });
 
                 
+<h2>~#5 까지</h2>
 
+    Interval 
+        -> setInterval(작업, 시간);
+    
+        몇초에 한번? 이벤트가 일어나게 하고 싶을때. 꼭 보여지는게 아니더라도 로그를 수시로 띄울때도 쓰임.
+    
+    timeout
+        ->timeOut(작업, 시간)
+
+        얼마나 있다 작업을 실행할 것 인가.
+
+    document.createElement("태그 안 이름")
+        -> const img = document.createElement("img");
+           console.log(img); -> <img>
