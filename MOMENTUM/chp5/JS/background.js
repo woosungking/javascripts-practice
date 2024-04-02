@@ -8,6 +8,7 @@ function createBgImg(){
     const bgimage = document.createElement("img");
     bgimage.src = image;
     document.body.appendChild(bgimage);
+    
 }
 
 

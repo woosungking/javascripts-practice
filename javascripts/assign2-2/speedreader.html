@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #EAF6F6;
+            font-size: 12pt;
+            
+            /* 2pt인 Garamond입니다. 사용할 수 없는 경우 시스템에서 사용 가능한 기본 서리프 글꼴을 사용해야 합니다 */
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            
+            
+            
+        }
+        .first-text-box{
+            width: 80%;
+            height: 100px;
+            margin: auto;
+
+            font-size: 36pt;
+            font-style: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 100px;
+            text-align: center;
+            
+            border: 2px solid #8EBEBE;
+            border-radius: 5px;
+
+            background-color: #FFFFFF;
+
+
+        }
+        .speed-reader{
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .main{
+            width: 100%;
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            
+
+        }
+
+        .main>div{
+            
+            width: 20%;
+            height: 50%;
+            margin-left: 5%;
+            margin-top: 5%;
+            text-align: left;
+            
+            
+            
+        }
+
+        .main2{
+            display: flex;
+            justify-content: center;
+            border: 1px solid gray;
+        }
+
+        .main2>div{
+            
+            
+        }
+
+        fieldset{
+            border: none;
+        }
+        fieldset>p{
+            font-style: bold;
+            
+            border-bottom: 1px solid #8EBEBE;
+            margin: 0px;
+            padding: 2px;
+        }
+
+         button {
+            background-color: lightgray;
+            border: 1px solid gray;
+            width: 70px;
+
+            margin-top: 2px;
+        }
+        button:hover{
+            background-color: #ffffff;
+        }
+
+        
+
+        .play-controls-container{
+            
+    
+        }
+
+        .play-controls-container{
+            
+            
+        }
+
+        .speed-container{
+            
+        }
+        .size-container{
+            
+        }
+
+
+        .inputText > fieldset > p, .inputText > fieldset > textarea {
+            font-style: bold;
+            width: 50%;
+            margin-left: 25%;
+            padding: 2px;
+        }
+        .inputText > fieldset > textarea{
+            border: 1px solid silver;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 class="speed-reader">Spead Reader</h1>
+    <div class="first-text-box">
+        
+    </div>
+
+    <div class="main">
+
+        <div class="play-controls-container">
+            <fieldset>
+                <p>Play Controls</p>
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </fieldset>
+            
+        </div>
+        
+        <div class="speed-container">
+            <fieldset>
+                <p>Speed</p>
+                <select class="speed">
+                    <option value="1200">50 wpm</option>
+                    <option value="200">300 wpm</option>
+                    <option value="171" selected>350 wpm</option>
+                    <option value="150">400 wpm</option>
+                    <option value="133"> 450 wpm</option>
+                    <option value="120">500 wpm</option>
+                </select>
+            </fieldset>
+        </div>
+
+        <div class="size-container">
+            <fieldset>
+                <p>Size</p>
+                <input type="radio" name="size" id="Medium" value="36pt" checked>Medium
+                <input type="radio" name="size" id="Big" value="48pt">Big
+                <input type="radio" name="size" id="Bigger" value="60pt">Bigger
+            </fieldset>
+        </div>
+    
+    </div>
+
+    <div class="inputText">
+        <fieldset>
+            <p>Input Text:</p>
+            <textarea id="text-area" rows="10" cols="80"></textarea>
+        </fieldset>
+    </div>
+    <script src="./speedreader.js"></script>
+</body>
+</html>

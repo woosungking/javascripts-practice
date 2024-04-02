@@ -1,4 +1,4 @@
-function sex() {
+function getquote() {
     const quote = document.querySelector("#quote span:first-child");
     const author = document.querySelector("#quote span:last-child");
     
@@ -41,4 +41,4 @@ const quotes = [
     { quote: "네 믿음은 네 생각이 된다. 네 생각은 네 말이 된다. 네 말은 네 행동이 된다. 네 행동은 네 습관이된다. 네 습관은 네 가치가 된다. 네 가치는 네 운명이 된다.", author: "간디" },
 ];
 
-setInterval(sex,1000);
+setInterval(getquote,1000);

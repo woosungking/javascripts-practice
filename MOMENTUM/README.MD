@@ -165,3 +165,12 @@
     document.createElement("태그 안 이름")
         -> const img = document.createElement("img");
            console.log(img); -> <img>
+
+    document.body.appendChild();
+
+<h2>~#7 까지</h2>
+
+    event.target.parentElement
+        To-Do-List 에 있는 일들을 지워야 하는데 각 버튼을 클레스,아이디 이름 없이 어떻게 구분을 지을것인지에 대한 방법으로는
+        click Event 를 변수로 받고 Click Event 에 Target => parentElement 를 보면 li Tag 인걸 볼 수 있다.
+        굳이 이렇게 안하더라도 개발자 로그에서 dir로 콘솔로그를 찍어보면 알 수 있다.
