@@ -57,6 +57,8 @@ HOOK의 종류
                         );
                     }
 
+            <!-- 클릭 이벤트가 발생했을 때, onClick 핸들러에서 setCount(count + 1)을 호출하여 count 값을 1 증가시킵니다. setCount 함수를 호출하면 React는 상태를 업데이트하고, 컴포넌트를 다시 렌더링합니다. -->
+            
     useEffect
 
         useEffect(이펙트 함수, 의존성 배열);
