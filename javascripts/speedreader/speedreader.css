@@ -1,0 +1,111 @@
+body{
+        
+
+    background-color: #EAF6F6;
+    font-size: 12pt;
+    font-family: serif;
+    
+    
+    
+}
+.first-text-box{
+    width: 80%;
+    height: 100px;
+    margin: auto;
+
+    font-size: 36pt;
+    font-style: bold;
+    line-height: 100px;
+    text-align: center;
+    font-family: monospace;
+    
+
+    background-color: #FFFFFF;
+    
+    border: 2px solid #8EBEBE;
+    border-radius: 5px;
+
+    background-color: #FFFFFF;
+
+
+}
+.speed-reader{
+    text-align: center;
+}
+
+.main{
+    width: 100%;
+    height: 25%;
+    
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.main>div{
+
+
+    width: 12%;
+    height: 30%;
+    /* margin-left: 2%; */
+    margin-top: 2%;
+    text-align: left;
+    
+    
+    
+}
+
+.main2{
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+.main2>div{
+    
+    
+}
+
+fieldset{
+    border: none;
+}
+fieldset > p{
+    border-bottom: 1px solid #8EBEBE;
+    display: block;
+    margin: 0px;
+    padding: 2px;
+}
+
+ button {
+    background-color: lightgray;
+    border: 1px solid gray;
+    width: 70px;
+
+    margin-top: 2px;
+}
+button:hover{
+    background-color: #ffffff;
+}
+
+
+
+.inputText > fieldset > p, .inputText > fieldset > textarea {
+    font-style: bold;
+    width: 30%;
+    margin-left: 35%;
+    padding: 2px;
+}
+.inputText > fieldset > textarea{
+    border: 1px solid silver;
+    background-color: #FFFFFF;
+    
+}
+
+footer {
+    width: 70px;
+    text-align: left;
+    display: flex;
+    bottom: 5px;
+    position: fixed;
+}
