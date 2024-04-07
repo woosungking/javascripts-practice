@@ -24,3 +24,6 @@ includes 함수를 사용하여 검증이 가능하다
             showWords(words, j);
             }, 1000);
         
+<h1>쿼리셀렉터를 똑똑하게 쓰기, 쿼리셀렉터에 까다로운 조건 추가하기</h1>
+const radioButton = document.querySelectorAll('input[type="radio"][name="size"]');
+let buttonValue = document.querySelector('input[type="radio"][name="size"]:checked').value;
