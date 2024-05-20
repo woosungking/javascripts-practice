@@ -12,6 +12,7 @@ import Clock from './chapter_04/clock';
 
 import Test from './htmlcsstest/Test';
 import UseStateHookEx from './\bhook/UseStateHookEx';
+import UseEffectEx from './\bhook/UseEffectEx';
 
 
 
@@ -62,7 +63,8 @@ ReactDOM.render(
       <Clock />
       <App />
       <NotificationList /> */}
-      <UseStateHookEx></UseStateHookEx>
+      {/* <UseStateHookEx></UseStateHookEx> */}
+      <UseEffectEx></UseEffectEx>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
