@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// import Library from './chapter_03/Library';
+import Library from './chapter_03/Library';
 // import Clock from './chapter_04/clock'
 // import CommentList from './chapter_05/CommentList';
  import NotificationList from './chapter_07/NotificationList';
 import Clock from './chapter_04/clock';
+
+import Test from './htmlcsstest/Test';
+import UseStateHookEx from './\bhook/UseStateHookEx';
+
 
 
 // ReactDOM.render(
@@ -52,12 +56,18 @@ import Clock from './chapter_04/clock';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Clock/>
-    <App/>
-    <NotificationList/>
+    <div>
+      {/* <Test />
+      <Library />
+      <Clock />
+      <App />
+      <NotificationList /> */}
+      <UseStateHookEx></UseStateHookEx>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
