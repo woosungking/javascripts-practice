@@ -34,6 +34,7 @@ let promise = new Promise((resolve, reject) => {
     if (btn) {
         console.log("1번째 then");
         console.log(result);
+        // resolve(1);
         return result;
     }
 }).then((result) => {
